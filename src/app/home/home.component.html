@@ -1,0 +1,160 @@
+<div class="container">
+  <div class="font-book-barber text-center">BOOK YOUR BARBER</div>
+  <div class="font-great-hair text-center great-hair">
+    Great Hair Doesn't Happen By Chance. It Happens By Appointment! <br />
+    <span class="second-header-text">
+      So Don't Wait And Book Your Appointment Now!
+    </span>
+  </div>
+  <div class="image-margin">
+    <div class="barber-image">
+      <img style="width: 100%; height: 100%" [src]="barberImage" border="0" />
+    </div>
+    <div class="form-container">
+      <div class="book-your-appointment font-book-your-appointment">
+        BOOK YOUR APPOINTMENT
+      </div>
+      <div class="flex-column" [formGroup]="form">
+        <div class="joined-form first-form-field">
+          <div class="form-field">
+            <dx-text-box
+              class="form-field-input"
+              placeholder="First Name"
+              formControlName="firstName"
+            ></dx-text-box>
+            <div
+              class="error-msg"
+              *ngIf="formConfirmed && form.controls.firstName.errors"
+            >
+              Please enter your full name
+            </div>
+          </div>
+          <div class="form-field">
+            <dx-text-box
+              class="form-field-input"
+              placeholder="Last Name"
+              formControlName="lastName"
+            >
+            </dx-text-box>
+          </div>
+        </div>
+        <div class="joined-form second-form-field">
+          <div class="form-field">
+            <dx-text-box
+              class="form-field-input"
+              placeholder="Email"
+              formControlName="email"
+            ></dx-text-box>
+            <div
+              class="error-msg"
+              *ngIf="formConfirmed && form.controls.email.errors"
+            >
+              Please enter a valid email
+            </div>
+          </div>
+          <div class="form-field">
+            <dx-text-box
+              class="form-field-input"
+              placeholder="Contact Number"
+              formControlName="contactNumber"
+              mask="+386 00 000 000"
+            ></dx-text-box>
+            <div
+              class="error-msg"
+              *ngIf="formConfirmed && form.controls.contactNumber.errors"
+            >
+              Please enter phone number
+            </div>
+          </div>
+        </div>
+        <div class="joined-form third-form-field">
+          <div class="form-field">
+            <dx-select-box
+              class="form-field-input"
+              [placeholder]="changingTitles.barber"
+              formControlName="barber"
+              [dataSource]="barbers"
+              displayExpr="lastName"
+              valueExpr="id"
+            ></dx-select-box>
+            <div
+              class="error-msg"
+              *ngIf="formConfirmed && form.controls.barber.errors"
+            >
+              Please select a barber
+            </div>
+          </div>
+          <div class="form-field">
+            <dx-select-box
+              class="form-field-input"
+              [placeholder]="changingTitles.service"
+              formControlName="service"
+              [dataSource]="services"
+              displayExpr="name"
+              valueExpr="id"
+            ></dx-select-box>
+            <div
+              class="error-msg"
+              *ngIf="formConfirmed && form.controls.service.errors"
+            >
+              Please select a service
+            </div>
+          </div>
+        </div>
+        <div class="joined-form forth-form-field">
+          <div class="form-field">
+            <dx-date-box
+              class="form-field-input"
+              [placeholder]="changingTitles.date"
+              formControlName="date"
+              [disabledDates]="disableDates"
+            ></dx-date-box>
+            <div
+              class="error-msg"
+              *ngIf="formConfirmed && form.controls.date.errors"
+            >
+              Please pick a date
+            </div>
+          </div>
+          <div class="form-field">
+            <dx-select-box
+              class="form-field-input"
+              type="time"
+              formControlName="time"
+              [dataSource]="availableTimes"
+              [placeholder]="changingTitles.time"
+            >
+            </dx-select-box>
+            <div
+              class="error-msg"
+              *ngIf="formConfirmed && form.controls.time.errors"
+            >
+              Please pick a time
+            </div>
+          </div>
+        </div>
+        <div class="joined-form fifth-form-field">
+          <div class="form-field">
+            <dx-number-box
+              class="form-field-input"
+              [placeholder]="changingTitles.price"
+              formControlName="price"
+              [disabled]="true"
+            ></dx-number-box>
+          </div>
+        </div>
+        <div class="joined-form">
+          <div class="form-field">
+            <dx-button
+              class="button font-book-appointment"
+              [text]="changingTitles.book"
+              width="100%"
+              height="100%"
+              (onClick)="startBooking()"
+            ></dx-button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;600&family=Squada+One&display=swap")
+
+$submit-button: #FD9564
+$form-background: #1C223A
+$required-field: red
+
+
+.font-book-barber
+  font-size: 58px
+  font-weight: 500
+  letter-spacing: 1px
+  font-family: 'Squada One', cursive
+.font-great-hair
+  font-size: 17px
+  font-weight: 500
+  letter-spacing: 1px
+  font-family: 'Roboto Slab', serif
+.font-book-your-appointment
+  font-size: 37px
+  font-weight: 500
+  letter-spacing: 1.8px
+  font-family: 'Squada One', cursive
+.font-form
+  font-size: 14px
+  font-weight: 500
+  letter-spacing: 0.6px
+  font-family: 'Roboto Slab', serif
+.font-book-appointment
+  font-size: 18px
+  font-weight: 400
+  letter-spacing: 2px
+  font-family: 'Roboto Slab', serif
+
+.great-hair
+  margin-top: 0.5%
+  line-height: 30px
+
+.text-center
+  text-align: center
+
+.image-margin
+  width: 59.4%
+  margin: auto
+  flex-grow: 1
+  position: relative
+  margin-bottom: 3%
+  margin-top: 2.6%
+
+.barber-image
+  object-fit: cover
+  width: 75.9%
+  height: 84.8%
+  z-index: 0
+  position: absolute
+  left: 0
+  top: 0
+  border: 3px solid black
+  padding: 10px
+  padding-bottom: 7px
+
+
+.form-container
+  z-index: 1
+  width: 38.4%
+  height: 81%
+  background-color: $form-background
+  position: absolute
+  right: 0
+  bottom: 0
+  color: white
+
+.container
+  height: 100%
+  width: 100%
+  max-height: 100%
+  max-width: 100%
+  display: flex
+  flex-direction: column
+  max-height: 100%
+
+.book-your-appointment
+  margin: 0 10px
+  word-wrap: break-word
+  text-align: center
+  margin-top: 6.7%
+
+.joined-form
+  display: flex
+
+.flex-column
+  display: flex
+  flex-direction: column
+  margin-top: 5%
+  margin-left: 5.9%
+  margin-right: 5.9%
+
+.form-field
+  flex: 1
+  margin: 7px 5px
+
+
+.button
+  background-color: $submit-button
+  border: none
+  border-radius: 30px
+  color: white
+  height: 55px !important
+
+.error-msg
+  color: #D8000C
+
+.first-form-field
+  margin-bottom: 22px
+.second-form-field
+  margin-bottom: 4px
+
+.third-form-field
+  margin-bottom: 10px
+
+.forth-form-field
+  margin-bottom: 13px
+
+.fifth-form-field
+  margin-bottom:25px
+
+.form-field-input
+  border-radius: 0px
+  height: 40px
+  font-weight: 500
+  font-size: 16px
+  color: darkgray !important
+
+
+@media (max-width: 1000px)
+  .image-margin
+    width: 89.7%
+    margin: auto
+  .barber-image
+    margin-top: 11%
+    position: relative
+    display: block
+    width: auto
+    height: auto
+    text-align: center
+    justify-content: center
+    padding: 9px
+  .form-container
+    display: block
+    position: relative
+    margin-top: 6.5%
+  .form-container
+    z-index: 10
+    width: 100%
+    height: auto
+    background-color: $form-background
+    position: relative
+    display: block
+    color: white
+    margin-bottom: 5%
+  .joined-form
+    display: block
+  .first-form-field
+    margin-top: 10px
+    margin-bottom: 0px
+  .second-form-field
+    margin-bottom: 0px
+  .third-form-field
+    margin-bottom: 0px
+  .forth-form-field
+    margin-bottom: 0px
+  .fifth-form-field
+    margin-bottom: 0px
+  .form-field
+    margin: 0
+    margin-bottom: 16px
+  .font-book-barber
+    font-size: 46px
+    margin-top: 1.8%
+  .second-header-text
+    display: none
+  .great-hair
+    margin-top: 2.6%
+    line-height: 30px
+    margin-left: 10%
+    margin-right: 10%
+  .book-your-appointment
+    padding-top: 6.1%
+  .flex-column
+    margin-top: 5%
+    margin-left: 7.2%
+    margin-right: 7%
+  .button
+    margin-top: 22px
+    margin-bottom: 7%
